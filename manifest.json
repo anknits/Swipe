@@ -1,0 +1,16 @@
+{
+    "description": "Swipes right on your loaded tinder matches",
+    "manifest_version": 2,
+    "name": "Tinder Right Swipe",
+    "version": "1.0",
+    "homepage_url": "https://github.com/anknits/Swipe/tree/master/Swipe",
+    "icons": {
+      "48": "icons/img-48.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.tinder.com/*"],
+        "js": ["swipe.js"]
+      }
+    ]  
+  }
