@@ -14,7 +14,7 @@
     "content_scripts": [
       {
         "matches": ["*://*.tinder.com/*"],
-        "js": ["swipe.js"]
+        "js": ["swipe-right.js"]
       }
     ]  
   }
