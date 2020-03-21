@@ -1,5 +1,5 @@
 {
-    "description": "Swipes right on 100 of your loaded tinder matches. Requires you to open https://tinder.com Signs you in via Facebook",
+    "description": "Swipes right on 100 of your loaded tinder matches. Opens https://tinder.com, Signs you in via Facebook",
     "manifest_version": 2,
     "name": "Tinder Right Swipe",
     "version": "1.0",
@@ -14,9 +14,14 @@
     "permissions": [
       "*://*.tinder.com/*", "*://*.facebook.com/*", "activeTab"
     ],
+    "browser_action": {
+      "default_icon": "icons/swipe-icon-32.png",
+      "default_title": "Tinderify",
+      "default_popup": "openTinder.html"
+    },
     "content_scripts": [
       {
-        "matches": ["*://*.tinder.com/*", "*://*.facebook.com/*"],
+        "matches": ["*://*.tinder.com/*"],
         "js": ["swipe-full.js"]
       }
     ],
